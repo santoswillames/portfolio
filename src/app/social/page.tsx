@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Social() {
   return (
-    <main className="h-screen bg-muted flex flex-col w-full px-2">
+    <main className="bg-muted flex flex-col w-full px-2 pb-2">
       <header className="w-full py-4 flex justify-end items-center">
         <ToggleTheme />
       </header>
@@ -33,11 +33,11 @@ export default function Social() {
             className="w-full max-w-[348px] py-6 bg-muted-foreground"
             size="lg"
           >
-            <Link 
-              href="https://api.whatsapp.com/send?phone=+5535998297078&text=Olá, gostaria de fazer um orçamento." 
+            <Link
+              href="https://api.whatsapp.com/send?phone=+5535998297078&text=Olá, gostaria de fazer um orçamento."
               target="_blank"
             >
-              Whatsaap - Orçamentos
+              WhatsApp - Orçamentos
             </Link>
           </Button>
           <Button
