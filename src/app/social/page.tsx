@@ -33,6 +33,15 @@ export default function Social() {
             className="w-full max-w-[348px] py-6 bg-muted-foreground"
             size="lg"
           >
+            <Link href="https://api.whatsapp.com/send?phone=+5535998297078&text=Olá, gostaria de fazer um orçamento." target="_blank">
+              Whatsaap - Orçamentos
+            </Link>
+          </Button>
+          <Button
+            asChild
+            className="w-full max-w-[348px] py-6 bg-muted-foreground"
+            size="lg"
+          >
             <Link href="/store" target="_blank">
               Equipamentos - Loja
             </Link>
