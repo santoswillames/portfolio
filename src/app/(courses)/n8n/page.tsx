@@ -2,14 +2,25 @@
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { motion } from 'framer-motion'
-import { CheckCircle, Rocket, Users, ShieldCheck } from 'lucide-react'
+import {
+  CheckCircle,
+  Rocket,
+  Users,
+  ShieldCheck,
+  ChevronDownIcon,
+} from 'lucide-react'
 
 import Image from 'next/image'
 import n8nLogo from '@/public/n8n-logo.png' // Substitua pelo caminho correto
 import Particles from '@/components/particles'
-import { Marquee } from '@/components/magicui/marquee'
 import { PulsatingButton } from '@/components/magicui/pulsating-button'
 import { BorderBeam } from '@/components/magicui/border-beam'
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from '@radix-ui/react-accordion'
 
 export default function LandingPage() {
   return (
@@ -56,23 +67,6 @@ export default function LandingPage() {
           </PulsatingButton>
         </div>
       </section>
-
-      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden mb-8 ">
-        <Marquee pauseOnHover className="[--duration:10s]">
-          <div>aqui vai um logo</div>
-          <div>outro</div>
-          <div>outro</div>
-          <div>outro</div>
-        </Marquee>
-        <Marquee reverse pauseOnHover className="[--duration:10s]">
-          <div>aqui vai um logo</div>
-          <div>outro</div>
-          <div>outro</div>
-          <div>outro</div>
-        </Marquee>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#172B67] "></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#030508]"></div>
-      </div>
 
       {/* Para Quem é Esse Curso */}
       <section className="py-16 px-6 bg-gray-800 relative z-10 max-w-[700px] md:m-auto rounded-md mx-3">
@@ -130,6 +124,61 @@ export default function LandingPage() {
             </CardContent>
           </Card>
         ))}
+      </section>
+      {/* Oferta Especial */}
+      <section className="py-20 px-6 bg-gradient-to-r from-yellow-500 via-pink-500 to-purple-600 text-white text-center relative z-10">
+        <h2 className="text-4xl font-bold mb-4">
+          Oferta Especial por Tempo Limitado
+        </h2>
+        <p className="text-lg max-w-2xl mx-auto mb-6">
+          Ao se inscrever agora, você recebe acesso a{' '}
+          <strong>bônus exclusivos</strong> incluindo módulos sobre JavaScript e
+          PostgreSQL — ferramentas essenciais para turbinar suas automações no
+          n8n.
+        </p>
+        <div className="flex justify-center items-center gap-10 mb-8">
+          <Image
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            alt="JavaScript Logo"
+            width={64}
+            height={64}
+          />
+          <Image
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+            alt="PostgreSQL Logo"
+            width={64}
+            height={64}
+          />
+        </div>
+        <Button className="bg-white text-black font-bold px-6 py-3 text-lg hover:bg-gray-200">
+          Garantir Minha Vaga com Bônus
+        </Button>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 px-6 bg-gray-900 text-white relative z-10">
+        <h2 className="text-3xl font-bold text-center mb-10">
+          Perguntas Frequentes
+        </h2>
+        <div className="max-w-3xl mx-auto space-y-4">
+          <Accordion type="single" collapsible className="space-y-4">
+            {faqList.map((faq, index) => (
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className={`rounded-lg border ${index % 2 === 0 ? 'bg-gray-800' : 'bg-gray-700'} shadow-md`}
+              >
+                <AccordionTrigger className="flex justify-between items-center text-lg font-semibold text-left px-4 py-3 w-full">
+                  {faq.question}
+                  <ChevronDownIcon className="w-5 h-5 text-blue-400 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                </AccordionTrigger>
+                <AccordionContent className="px-4 pb-3 text-gray-300">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </section>
 
       {/* CTA Final */}
@@ -204,5 +253,28 @@ const benefits = [
     title: 'Encontros Ao Vivo',
     description: 'Aulas práticas para aprofundar o conhecimento.',
     icon: Rocket,
+  },
+]
+
+const faqList = [
+  {
+    question: 'Preciso saber programar para fazer o curso?',
+    answer:
+      'Não! O curso é feito para iniciantes e não exige experiência prévia com código.',
+  },
+  {
+    question: 'O acesso é vitalício?',
+    answer:
+      'Não! Após se inscrever, você terá acesso durante um ano a todos os conteúdos.',
+  },
+  {
+    question: 'Existe algum grupo para tirar dúvidas?',
+    answer:
+      'Sim! Temos uma comunidade ativa no Discord para suporte e troca de ideias.',
+  },
+  {
+    question: 'Qual a duração do curso?',
+    answer:
+      'O curso pode ser feito no seu ritmo, mas lembre-se do período da assinatura.',
   },
 ]
