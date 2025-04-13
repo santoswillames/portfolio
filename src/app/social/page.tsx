@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 
 export default function Social() {
   return (
-    <main className="bg-muted flex flex-col w-full px-2 pb-2">
+    <main className="bg-muted flex flex-col w-full px-2 pb-2 h-screen overflow-auto">
       <header className="w-full py-4 flex justify-end items-center">
         <ToggleTheme />
       </header>
       <section className="flex flex-col justify-center items-center gap-1 w-full flex-1">
-        <Avatar className="w-24 h-24">
+        <Avatar className="size-28">
           <AvatarImage src="https://github.com/santoswillames.png" />
           <AvatarFallback>
             <div className="bg-muted-foreground w-full h-full" />
@@ -27,7 +27,17 @@ export default function Social() {
         <p className="text-muted-foreground">
           FullStack Developer & Content Creator
         </p>
+
         <div className="mt-6 justify-center items-center w-full flex flex-col gap-4">
+          <Button
+            asChild
+            className="w-full max-w-[348px] py-6 bg-muted-foreground"
+            size="lg"
+          >
+            <Link href="https://devwill.vercel.app/n8n" target="_blank">
+              Domine N8N e Agentes de IA
+            </Link>
+          </Button>
           <Button
             asChild
             className="w-full max-w-[348px] py-6 bg-muted-foreground"
