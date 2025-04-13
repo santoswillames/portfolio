@@ -282,8 +282,7 @@ const faqList = [
   },
   {
     question: 'O acesso é vitalício?',
-    answer:
-      'Não! Após se inscrever, você terá acesso durante um ano a todos os conteúdos.',
+    answer: 'Sim! Mas por tempo determinado, por isso aproveite a promoção',
   },
   {
     question: 'Existe algum grupo para tirar dúvidas?',
@@ -293,6 +292,6 @@ const faqList = [
   {
     question: 'Qual a duração do curso?',
     answer:
-      'O curso pode ser feito no seu ritmo, mas lembre-se do período da assinatura.',
+      'O curso pode ser feito no seu ritmo, mas lembre-se o acesso vitalício é por pouco tempo, aproveita agora!',
   },
 ]
