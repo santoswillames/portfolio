@@ -62,9 +62,15 @@ export default function LandingPage() {
           mais.
         </p>
         <div className="flex justify-center">
-          <PulsatingButton className="text-white bg-blue-500 hover:bg-blue-600 relative z-10">
-            Quero Me Inscrever
-          </PulsatingButton>
+          <a
+            href="https://pay.kiwify.com.br/ar7vrIl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <PulsatingButton className="text-white bg-blue-500 hover:bg-blue-600 relative z-10">
+              Quero Me Inscrever
+            </PulsatingButton>
+          </a>
         </div>
       </section>
 
@@ -150,9 +156,15 @@ export default function LandingPage() {
             height={64}
           />
         </div>
-        <Button className="bg-white text-black font-bold px-6 py-3 text-lg hover:bg-gray-200">
-          Garantir Minha Vaga com Bônus
-        </Button>
+        <a
+          href="https://pay.kiwify.com.br/ar7vrIl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button className="bg-white text-black font-bold px-6 py-3 text-lg hover:bg-gray-200">
+            Garantir Minha Vaga com Bônus
+          </Button>
+        </a>
       </section>
 
       {/* FAQ */}
@@ -196,9 +208,15 @@ export default function LandingPage() {
         <p className="text-lg text-gray-300 mb-6">
           Garanta sua vaga agora e comece a criar automações incríveis.
         </p>
-        <Button className="px-6 py-3 text-lg bg-blue-500 hover:bg-blue-600">
-          Quero Começar Agora
-        </Button>
+        <a
+          href="https://pay.kiwify.com.br/ar7vrIl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button className="px-6 py-3 text-lg bg-blue-500 hover:bg-blue-600">
+            Quero Começar Agora
+          </Button>
+        </a>
       </section>
     </main>
   )
