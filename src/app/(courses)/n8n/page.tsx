@@ -131,7 +131,7 @@ export default function LandingPage() {
           Oferta Especial por Tempo Limitado
         </h2>
         <p className="text-lg max-w-2xl mx-auto mb-6">
-          Ao se inscrever agora, você recebe acesso a{' '}
+          Ao se inscrever agora, você recebe acesso a
           <strong>bônus exclusivos</strong> incluindo módulos sobre JavaScript e
           PostgreSQL — ferramentas essenciais para turbinar suas automações no
           n8n.
