@@ -53,7 +53,7 @@ export default function LandingPage() {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          Domine o <span className="text-blue-400">n8n</span> e Crie Agentes de
+          Domine o <span className="text-blue-400">N8N</span> e Crie Agentes de
           IA Poderosos
         </motion.h1>
 
@@ -138,8 +138,8 @@ export default function LandingPage() {
         </h2>
         <p className="text-lg max-w-2xl mx-auto mb-6">
           Ao se inscrever agora, você recebe acesso a
-          <strong>bônus exclusivos</strong> incluindo módulos sobre JavaScript e
-          PostgreSQL — ferramentas essenciais para turbinar suas automações no
+          <strong> bônus exclusivos</strong> incluindo módulos sobre JavaScript
+          e PostgreSQL — ferramentas essenciais para turbinar suas automações no
           n8n.
         </p>
         <div className="flex justify-center items-center gap-10 mb-8">
@@ -223,6 +223,7 @@ export default function LandingPage() {
 }
 
 const targetAudience = [
+  'Aprender a profissão de Gestor de automações ser bem remunerado.',
   'Quer automatizar tarefas sem depender de programadores.',
   'Deseja criar agentes de IA personalizados.',
   'Trabalha com CRM, planilhas e e-mails e quer ganhar mais produtividade.',
@@ -231,28 +232,64 @@ const targetAudience = [
 
 const courseModules = [
   {
-    title: 'Introdução ao n8n',
-    description: 'Primeiros passos na ferramenta.',
+    title: 'Introdução',
+    description:
+      'Este módulo inicial tem como objetivo apresentar o curso, esclarecer os objetivos de aprendizagem e contextualizar você sobre a jornada que fará desde os conceitos básicos até as aplicações avançadas com n8n e agentes de IA.',
   },
   {
-    title: 'Criação de Automação',
-    description: 'Automatizando processos complexos.',
+    title: 'Fundamentos de Agentes de IA',
+    description:
+      'Neste módulo, você será introduzido aos conceitos fundamentais por trás dos agentes de inteligência artificial. A ideia é construir uma base teórica sólida antes de entrar na parte prática, para que você entenda o que são agentes de IA, como eles funcionam, e por que são essenciais em automações modernas.',
   },
   {
-    title: 'Integração com CRM',
-    description: 'Automatize seu funil de vendas.',
+    title: 'Engenharia de prompt',
+    description:
+      'Neste módulo, você vai aprender a se comunicar de forma eficaz com modelos de linguagem como o ChatGPT, dominando técnicas de engenharia de prompt.',
   },
   {
-    title: 'Criação de Agentes de IA',
-    description: 'Personalize IA sem código.',
+    title: 'Fundamentos de Automações com IA',
+    description:
+      'Neste módulo, você vai entender como unir inteligência artificial com automações práticas. Ou seja: como transformar decisões tomadas por modelos de IA em ações reais, dentro de sistemas, ferramentas ou fluxos de trabalho automatizados.',
   },
   {
-    title: 'Integração com Supabase',
-    description: 'Gerencie dados de forma avançada.',
+    title: 'Fundamentos do N8N',
+    description:
+      'Neste módulo, você será introduzido ao universo do N8N, entendendo desde o que é a ferramenta até como construir seus primeiros workflows.',
   },
   {
-    title: 'Automação de Pagamentos',
-    description: 'Facilite transações automaticamente.',
+    title: 'Infraestrutura e Hospedagem do N8N',
+    description:
+      'Neste módulo, o foco será mostrar como hospedar, configurar e manter o N8N em produção, seja localmente, na nuvem, ou via serviços gerenciados.',
+  },
+  {
+    title: 'N8N com Banco de Dados e APIs | Tools dos Agentes',
+    description:
+      'Este módulo ensina como conectar o N8N com bancos de dados e APIs externas, transformando agentes de IA em ferramentas realmente úteis.',
+  },
+  {
+    title: 'WhatsApp e Agentes de IA',
+    description:
+      'Neste módulo, você aprenderá a integrar o N8N com o WhatsApp e conectar essa automação com agentes de IA que atendem, respondem e tomam decisões automaticamente.',
+  },
+  {
+    title: 'Agentes de IA Humanizados e Vendedores',
+    description:
+      'Neste módulo, você vão aprender a criar agentes de IA com comportamento natural, tom humano e foco em conversão. Serão explorados recursos multimodais (áudio, imagem), atendimento com empatia e inteligência, uso de filas para escalar, e o poderoso conceito de RAG.',
+  },
+  {
+    title: 'Gerenciando Pagamentos com ASAAS',
+    description:
+      'Neste módulo, você vai aprender a integrar o N8N com o ASAAS, plataforma brasileira de gestão de cobranças e pagamentos, para criar fluxos de automação financeira: geração de boletos, cobranças por Pix, acompanhamento de status de pagamento e envio de mensagens automáticas no WhatsApp com as informações.',
+  },
+  {
+    title: 'Multi-Agentes e MCP (Model Context Protocol)',
+    description:
+      'Neste módulo, vamos explorar como usar o Model Context Protocol (MCP) para construir arquiteturas de agentes de IA interconectados e capazes de manter contexto entre as interações.',
+  },
+  {
+    title: 'BÔNUS - JavaScript + PostgreSQL',
+    description:
+      'Neste módulo bônus, você vai aprender a usar JavaScript no N8N para criar lógicas personalizadas dentro dos workflows, e também a interagir com bancos de dados PostgreSQL para salvar, consultar e manipular dados de forma robusta.',
   },
 ]
 
