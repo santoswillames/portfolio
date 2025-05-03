@@ -11,7 +11,8 @@ import {
 } from 'lucide-react'
 
 import Image from 'next/image'
-import n8nLogo from '@/public/n8n-logo.png' // Substitua pelo caminho correto
+import n8nLogo from '@/public/n8n-logo.png'
+import selo from '@/public/selo-garantia.png'
 import Particles from '@/components/particles'
 import { PulsatingButton } from '@/components/magicui/pulsating-button'
 import { BorderBeam } from '@/components/magicui/border-beam'
@@ -53,13 +54,13 @@ export default function LandingPage() {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          Domine o <span className="text-blue-400">N8N</span> e Crie Agentes de
-          IA Poderosos
+          Ganhe de R$3.000,00 a R$10.000,00 com automações e agentes de IA!
         </motion.h1>
 
         <p className="text-lg text-gray-300 mb-6 relative z-10">
-          Aprenda automações avançadas, integração com CRM, Supabase e muito
-          mais.
+          Domine o <span className="text-pink-500 font-bold">N8N</span> e Crie
+          Agentes de IA Poderosos. Aprenda a profissão de Gestor de Automação e
+          seja reconhecido no mercado.
         </p>
         <div className="flex justify-center">
           <a
@@ -67,13 +68,12 @@ export default function LandingPage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <PulsatingButton className="text-white bg-blue-500 hover:bg-blue-600 relative z-10">
+            <PulsatingButton className="text-white bg-pink-500 hover:bg-pink-600 relative z-10 px-8 py-4">
               Quero Me Inscrever
             </PulsatingButton>
           </a>
         </div>
       </section>
-
       {/* Para Quem é Esse Curso */}
       <section className="py-16 px-6 bg-gray-800 relative z-10 max-w-[700px] md:m-auto rounded-md mx-3">
         <h2 className="text-center text-3xl font-bold mb-6">
@@ -82,24 +82,23 @@ export default function LandingPage() {
         <ul className="max-w-4xl mx-auto space-y-4 text-lg">
           {targetAudience.map((item, index) => (
             <li key={index} className="flex items-center gap-3">
-              <CheckCircle className="text-blue-400 w-6 h-6" />
+              <CheckCircle className="text-pink-500 w-6 h-6" />
               {item}
             </li>
           ))}
         </ul>
         <BorderBeam
           duration={6}
-          size={400}
-          className="from-transparent via-red-500 to-transparent"
+          size={500}
+          className="from-transparent via-pink-500 to-transparent"
         />
         <BorderBeam
           duration={6}
           delay={3}
-          size={400}
+          size={500}
           className="from-transparent via-blue-500 to-transparent"
         />
       </section>
-
       {/* O Que Você Vai Aprender */}
       <section className="py-16 px-6 relative z-10">
         <h2 className="text-center text-3xl font-bold mb-6">
@@ -109,7 +108,7 @@ export default function LandingPage() {
           {courseModules.map((module, index) => (
             <Card key={index} className="bg-gray-800 shadow-lg">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-blue-400">
+                <h3 className="text-xl font-semibold text-pink-400">
                   {module.title}
                 </h3>
                 <p className="text-gray-400 mt-2">{module.description}</p>
@@ -118,13 +117,12 @@ export default function LandingPage() {
           ))}
         </div>
       </section>
-
       {/* Benefícios */}
       <section className="py-16 px-6 grid md:grid-cols-3 gap-6 max-w-6xl mx-auto relative z-10">
         {benefits.map((benefit, index) => (
           <Card key={index} className="bg-gray-800 shadow-lg">
             <CardContent className="p-6 flex flex-col items-center text-center">
-              <benefit.icon className="w-12 h-12 text-blue-400 mb-4" />
+              <benefit.icon className="w-12 h-12 text-pink-500 mb-4" />
               <h3 className="text-xl font-semibold">{benefit.title}</h3>
               <p className="text-gray-400 mt-2">{benefit.description}</p>
             </CardContent>
@@ -161,12 +159,11 @@ export default function LandingPage() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button className="bg-white text-black font-bold px-6 py-3 text-lg hover:bg-gray-200">
+          <Button className="bg-white text-black font-bold px-6 py-7 text-lg hover:bg-blue-300">
             Garantir Minha Vaga com Bônus
           </Button>
         </a>
       </section>
-
       {/* FAQ */}
       <section className="py-20 px-6 bg-gray-900 text-white relative z-10">
         <h2 className="text-3xl font-bold text-center mb-10">
@@ -192,19 +189,29 @@ export default function LandingPage() {
           </Accordion>
         </div>
       </section>
-
       {/* CTA Final */}
       <section className="py-16 text-center relative z-10">
         <h2 className="text-3xl font-bold mb-4 mx-3">
           Pronto para Transformar Seu Trabalho?
         </h2>
-        <Image
-          src={n8nLogo}
-          alt="N8n Logo"
-          width={80}
-          height={80}
-          className="mx-auto my-4"
-        />
+
+        {/* Selo com posição ajustada para diferentes tamanhos de tela */}
+        <div className="absolute -top-4 left-[60%] -translate-x-1/3 rotate-[-12deg] z-20 md:top-24 md:left-[65%]">
+          <Image
+            src={selo}
+            alt="selo garantia 7 dias"
+            width={90}
+            height={90}
+            className="drop-shadow-lg"
+          />
+        </div>
+        <p className="text-lg mb-2">
+          De <del className="text-gray-400 line-through">R$ 997,00</del> por:
+        </p>
+        <p className="text-5xl font-bold">
+          12x <span className="text-6xl">R$ 51,40</span>
+        </p>
+        <p className="text-lg">No cartão ou R$ 497,00 à vista!</p>
         <p className="text-lg text-gray-300 mb-6">
           Garanta sua vaga agora e comece a criar automações incríveis.
         </p>
@@ -213,7 +220,7 @@ export default function LandingPage() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button className="px-6 py-3 text-lg bg-blue-500 hover:bg-blue-600">
+          <Button className="px-8 py-7 text-lg bg-pink-500 hover:bg-pink-600 text-white transition-all">
             Quero Começar Agora
           </Button>
         </a>
