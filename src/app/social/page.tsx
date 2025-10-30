@@ -29,7 +29,6 @@ export default function Social() {
         </p>
 
         <div className="mt-6 justify-center items-center w-full flex flex-col gap-4">
-          
           <Button
             asChild
             className="w-full max-w-[348px] py-6 bg-muted-foreground"
@@ -98,4 +97,3 @@ export default function Social() {
     </main>
   )
 }
-
